@@ -14,33 +14,32 @@
     <img id='bgi' src="/e0bd18efa4166062451f9b1105e5d8f7.jpg" alt="back">
     <div class="bg"> </div>
     <div id="lessonName">
-        <span id="nameOfLesson">نام درس</span>
-        <span id="nameOfTopic">مبحث </span>
+        <span id="nameOfLesson" contenteditable="true">نام درس</span>
+        <span id="nameOfTopic" contenteditable="true">مبحث </span>
     </div>
-    <div id="choiseBox">
-        <span class="choise">1</span>
-        <span class="choise">2</span>
-        <span class="choise">3</span>
-        <span class="choise">4</span>
+    <div id="choiceBox">
+        <span class="choice">1</span>
+        <span class="choice">2</span>
+        <span class="choice">3</span>
+        <span class="choice">4</span>
     </div>
     <div id="currentQ">
-        <span>شماره سوال</span>
+        <span style="font-size: x-large;">شماره سوال</span>
         <span id="currentNumber">--</span>
     </div>
     <div id="startNum">
         <label for="Qinp" >شماره ی شروع <span class="fas fa-map-marker fa-fade"></span></label>
        <div class="Qinpbox" >
-        <input type="number" name="Qinp" id="Qinp" placeholder="شماره سوال مبدا ؟ ...">
+        <input type="number" name="Qinp" id="Qinp" value="1" placeholder="شماره سوال مبدا ؟ ...">
         <button id="QinpBtn"> ثبت <span class="fas fa-paper-plane"></span></button>
        </div>
     </div>
     <div id="increament">
         <span>روند افزایش <span class="arrdown fas fa-arrow-up fa-fade"></span></span>
         <form id="increase">
-            <label for="1">تک تک </label><input type="radio" name="1" id="1" checked>
-            <label for="2"> زوج ها</label><input type="radio" name="1" id="2">
-            <label for="3"> فردها </label><input type="radio" name="1" id="3">
-            <label for="4"> دیگر؟</label><input type="radio" name="1" id="4">
+            <label for="1">تک تک </label><input type="radio" name="1" value="1" checked>
+            <label for="2"> زوج ها</label><input type="radio" name="1" value="2">
+            <label for="3"> فردها </label><input type="radio" name="1" value="3">
         </form>
     </div>
     <div id="timer">
@@ -50,6 +49,12 @@
             <button class="reset timeBtn"><span class="fas fa-refresh"></span>از اول</button>
         </div>
     </div>
+    <table class="answerTable">
+        <thead>
+            <th>شماره سوال</th>
+            <th>گزینه مورد نظر</th>
+        </thead>
+    </table>
     <script src="test.js"></script>
 </body>
 </html>
