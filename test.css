@@ -161,6 +161,9 @@ body {
 #increament:hover #increase {
   display: flex;
 }
+#increament:hover {
+  height: 160px;
+}
 
 .bg {
   width: 100vw;
@@ -201,6 +204,7 @@ body {
   font-size: xx-large;
   margin-left: -28%;
   margin-bottom: -22%;
+  display: none;
 }
 .btnBox {
   display: none;
@@ -211,6 +215,7 @@ body {
   width: 80%;
   margin-left: -24%;
   margin-bottom: -10%;
+  margin-top: -29%;
 }
 #timer:hover .btnBox {
   display: flex;
@@ -231,7 +236,30 @@ body {
   left: 21%;
   width: 55%;
 }
-th td {
+th:nth-of-type(2n),
+td:nth-of-type(2n) {
+  border-left: solid black;
+}
+th:nth-of-type(2n) {
+  border-left: 5px solid black;
+  box-sizing: content-box;
 }
 tr {
-    border-bottom: black solid;}
+  border-bottom: black solid;
+}
+table {
+  z-index: -1;
+}
+.inputs {
+  display: flex;
+  align-items: center;
+  font-size: xxx-large;
+}
+.inputs input {
+  width: 30%;
+  height: 20px;
+  border: black solid;
+  border-radius: 20px;
+  text-align: center;
+  font-size: medium;
+}

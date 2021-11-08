@@ -1,60 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>test</title>
-    <link rel="stylesheet" href="test.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link rel="stylesheet" href="test.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body>
-    <img id='bgi' src="/e0bd18efa4166062451f9b1105e5d8f7.jpg" alt="back">
-    <div class="bg"> </div>
+  <body>
+    <img id="bgi" src="/e0bd18efa4166062451f9b1105e5d8f7.jpg" alt="back" />
+    <div class="bg"></div>
     <div id="lessonName">
-        <span id="nameOfLesson" contenteditable="true">نام درس</span>
-        <span id="nameOfTopic" contenteditable="true">مبحث </span>
+      <span id="nameOfLesson" contenteditable="true">نام درس</span>
+      <span id="nameOfTopic" contenteditable="true">مبحث </span>
     </div>
     <div id="choiceBox">
-        <span class="choice">1</span>
-        <span class="choice">2</span>
-        <span class="choice">3</span>
-        <span class="choice">4</span>
+      <span class="choice">1</span>
+      <span class="choice">2</span>
+      <span class="choice">3</span>
+      <span class="choice">4</span>
     </div>
     <div id="currentQ">
-        <span style="font-size: x-large;">شماره سوال</span>
-        <span id="currentNumber">--</span>
+      <span style="font-size: x-large">شماره سوال</span>
+      <span id="currentNumber">--</span>
     </div>
     <div id="startNum">
-        <label for="Qinp" >شماره ی شروع <span class="fas fa-map-marker fa-fade"></span></label>
-       <div class="Qinpbox" >
-        <input type="number" name="Qinp" id="Qinp" value="1" placeholder="شماره سوال مبدا ؟ ...">
-        <button id="QinpBtn"> ثبت <span class="fas fa-paper-plane"></span></button>
-       </div>
+      <label for="Qinp"
+        >شماره ی شروع <span class="fas fa-map-marker fa-fade"></span
+      ></label>
+      <div class="Qinpbox">
+        <input
+          type="number"
+          name="Qinp"
+          id="Qinp"
+          value="1"
+          placeholder="شماره سوال مبدا ؟ ..."
+        />
+        <button id="QinpBtn">
+          ثبت <span class="fas fa-paper-plane"></span>
+        </button>
+      </div>
     </div>
     <div id="increament">
-        <span>روند افزایش <span class="arrdown fas fa-arrow-up fa-fade"></span></span>
-        <form id="increase">
-            <label for="1">تک تک </label><input type="radio" name="1" value="1" checked>
-            <label for="2"> زوج ها</label><input type="radio" name="1" value="2">
-            <label for="3"> فردها </label><input type="radio" name="1" value="3">
-        </form>
+      <span
+        >روند افزایش <span class="arrdown fas fa-arrow-up fa-fade"></span
+      ></span>
+      <form id="increase">
+        <label for="1">تک تک </label
+        ><input type="radio" name="1" value="1" checked />
+        <label for="2">یکی درمیان</label
+        ><input type="radio" name="1" value="2" />
+      </form>
     </div>
     <div id="timer">
-        <span class="time">زمان : زمان</span>
-        <div class="btnBox">
-            <button class="setNew timeBtn"> <span class="fas fa-edit"></span> تنظیم مجدد</button>
-            <button class="reset timeBtn"><span class="fas fa-refresh"></span>از اول</button>
+      <span class="time"></span>
+      <div class="inputs">
+          <input type="number" id="minute" placeholder="دقیقه"/>
+          <span style="font-size: xxx-large;">:</span>
+          <input type="number" id="second" placeholder="ثانیه" />
         </div>
+      <div class="btnBox">
+          <button class="start timeBtn">
+            <span class="fas fa-refresh"></span>شروع
+          </button>
+        <button class="setNew timeBtn" disabled>
+          <span class="fas fa-edit"></span> تنظیم مجدد
+        </button>
+      </div>
     </div>
     <table class="answerTable">
-        <thead>
-            <th>شماره سوال</th>
-            <th>گزینه مورد نظر</th>
-        </thead>
+      <thead>
+        <th>شماره سوال</th>
+        <th>گزینه مورد نظر</th>
+      </thead>
+      <tbody></tbody>
     </table>
     <script src="test.js"></script>
-</body>
+  </body>
 </html>
