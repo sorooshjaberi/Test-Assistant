@@ -64,20 +64,21 @@ function timer() {
   start.addEventListener("click", (e) => {
     //if is not valued
     if (+minute.value == 0) minute.value = 0;
-
     //if is not valued
     if (+second.value == 0) second.value = 0;
-    e.target.disabled = true;
-    timeDown(timeConcat(), e);
+    start.disabled = true;
+    console.log(+minute.value * 60 + +second.value);
+    timeDown(timeConcat());
   });
 }
 function timeConcat() {
   let total = 0;
-  total += +minute.value * 60 + +second.value;
+  total = +minute.value * 60 + +second.value;
+  
   return total;
 }
 timer();
-function timeDown(time, btn) {
+function timeDown(time) {
   //counting down the time
   let temp = time,
     html = ``;
@@ -93,7 +94,7 @@ function timeDown(time, btn) {
       inputs.innerHTML = ` <input type="number" id="minute" placeholder="دقیقه"/>
       <span style="font-size: xxx-large;">:</span>
       <input type="number" id="second" placeholder="ثانیه" />`;
-      btn.target.disabled = false;
+     start.disabled = false;
     }
     console.log(temp);
   }, 1000);
@@ -108,5 +109,6 @@ function setNewer(interval) {
       <input type="number" id="second" placeholder="ثانیه" />`;
       setNew.disabled = true;
       start.disabled = false;
+     
   });
 }
